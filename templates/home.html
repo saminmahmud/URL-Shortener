@@ -12,15 +12,14 @@
       crossorigin="anonymous"
     />
   </head>
-  <body class="bg-secondary">
-    <section class="vh-80 bg-image mt-5">
+    <body style="background-color: #222; height: 100vh; display: flex; align-items: center; justify-content: center;">
+    <section class=" bg-image " style="width:95%;">
       <div class="mask d-flex align-items-center h-100 gradient-custom-3">
         <div class="container h-100">
           <div
-            class="row d-flex justify-content-center align-items-center h-100"
-          >
+            class="row d-flex justify-content-center align-items-center h-100">
             <div class="col-12 col-md-9 col-lg-7 col-xl-6">
-              <div class="card" style="border-radius: 15px">
+                <div class="card" style="border-radius: 15px; margin: auto;">
                 <div class="card-body p-5">
                   <h2 class="text-uppercase text-center mb-5">URL Shortener</h2>
 
@@ -30,11 +29,6 @@
                     {% for field in form.visible_fields %}
 
                     <div class="form-outline mb-4">
-                      {% comment %}
-                      <label class="form-label" for="{{ field.id_for_label }}">
-                        {{ field.label }}
-                      </label>
-                      {% endcomment %}
                       <input
                         placeholder="Enter the url here"
                         name="{{ field.name }}"
@@ -52,8 +46,7 @@
                     <div class="d-flex justify-content-center">
                       <button
                         type="submit"
-                        class="btn btn-success btn-lg gradient-custom-4"
-                      >
+                        class="btn btn-success btn-lg gradient-custom-4">
                         Submit
                       </button>
                     </div>
@@ -66,12 +59,11 @@
       </div>
     </section>
 
-    <footer class="fixed-bottom">
+    <footer class="fixed-bottom border-top border-light">
       <div
-        class="text-center p-3 text-white-50"
-        style="background-color: rgba(0, 0, 0, 0.2)"
-      >
-        © {% now "Y" %} All Rights Reserved By <strong>Samin Mahmud</strong>
+        class="text-center p-3 text-white"
+        style="background-color: #222422; font-size: small">
+        ©{% now "Y" %} All Rights Reserved By <strong>Samin Mahmud</strong>
       </div>
     </footer>
 
